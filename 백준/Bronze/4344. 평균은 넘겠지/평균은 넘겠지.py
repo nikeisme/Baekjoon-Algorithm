@@ -7,6 +7,6 @@ for i in range(n):
     for score in nums[1:]:
         if score > avg:
             cnt += 1 
-    rate = cnt/nums[0] *100
-    print(f'{rate:.3f}%')
+    result= cnt/nums[0] *100
+    print(f'{result:.3f}%')
     
