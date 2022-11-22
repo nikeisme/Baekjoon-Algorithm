@@ -3,13 +3,16 @@ import java.util.*;
 class Solution {
     public String solution(String rsp) {
         String answer = "";
-      
-        for (int i=0; i<rsp.length(); i++) {
-            answer +=  (rsp.split("")[i].equals("0")?"5"
-                       	:rsp.split("")[i].equals("2")?"0"
-                       	:rsp.split("")[i].equals("5")?"2" : "9");
-        }
         
+        for(int i=0; i<rsp.length(); i++) {
+            String str = rsp.charAt(i) + "";
+            
+            if(str.equals("2")) answer +="0";
+            else if(str.equals("0")) answer +="5";
+            else answer +="2";
+            
+        }
+               
         return answer;
     }
 }
